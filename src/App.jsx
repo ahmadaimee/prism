@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Routes, Route, Link, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
-import { Hexagon, Phone, MessageCircle } from 'lucide-react';
+import { Hexagon, Phone, MessageCircle, Menu, X } from 'lucide-react';
 import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
@@ -14,26 +14,32 @@ import './App.css';
 
 function App() {
   const location = useLocation();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
     <div className="app">
       <ScrollToTop />
-      <nav className="navbar" style={{ padding: '1rem 0' }}>
+      <nav className="navbar" style={{ padding: '0.5rem 0', position: 'sticky', top: 0, zIndex: 1000, background: 'rgba(255,255,255,0.9)', backdropFilter: 'blur(10px)', borderBottom: '1px solid rgba(0,0,0,0.05)' }}>
         <div className="container">
-          <Link to="/" style={{ textDecoration: 'none' }}>
-            <div className="logo-modern">
-              <Hexagon size={28} color="var(--primary)" fill="rgba(0, 242, 254, 0.2)" />
-              PRISM PRESENCE
-            </div>
-          </Link>
-          <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
-            <Link to="/" style={{ color: 'var(--text-color)', textDecoration: 'none', fontWeight: 600 }}>Home</Link>
-            <Link to="/about" style={{ color: 'var(--text-color)', textDecoration: 'none', fontWeight: 600 }}>About</Link>
-            <Link to="/services" style={{ color: 'var(--text-color)', textDecoration: 'none', fontWeight: 600 }}>Services</Link>
-            <Link to="/pricing" style={{ color: 'var(--text-color)', textDecoration: 'none', fontWeight: 600 }}>Pricing</Link>
-            <Link to="/blog" style={{ color: 'var(--text-color)', textDecoration: 'none', fontWeight: 600 }}>Blog</Link>
-            <Link to="/contact">
-              <button style={{ padding: '0.6rem 1.5rem', boxShadow: 'none' }}>Get Started</button>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%', padding: '0.5rem 0' }}>
+            <Link to="/" style={{ textDecoration: 'none' }} onClick={() => setIsMobileMenuOpen(false)}>
+              <div className="logo-modern">
+                <Hexagon size={28} color="var(--primary)" fill="rgba(0, 242, 254, 0.2)" />
+                PRISM PRESENCE
+              </div>
+            </Link>
+            <button className="mobile-menu-btn" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} style={{ background: 'transparent', boxShadow: 'none', padding: 0, color: 'var(--text-color)', display: 'none', border: 'none' }}>
+              {isMobileMenuOpen ? <X size={32} /> : <Menu size={32} />}
+            </button>
+          </div>
+          <div className={`nav-links ${isMobileMenuOpen ? 'active' : ''}`} style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
+            <Link onClick={() => setIsMobileMenuOpen(false)} to="/" style={{ color: 'var(--text-color)', textDecoration: 'none', fontWeight: 600 }}>Home</Link>
+            <Link onClick={() => setIsMobileMenuOpen(false)} to="/about" style={{ color: 'var(--text-color)', textDecoration: 'none', fontWeight: 600 }}>About</Link>
+            <Link onClick={() => setIsMobileMenuOpen(false)} to="/services" style={{ color: 'var(--text-color)', textDecoration: 'none', fontWeight: 600 }}>Services</Link>
+            <Link onClick={() => setIsMobileMenuOpen(false)} to="/pricing" style={{ color: 'var(--text-color)', textDecoration: 'none', fontWeight: 600 }}>Pricing</Link>
+            <Link onClick={() => setIsMobileMenuOpen(false)} to="/blog" style={{ color: 'var(--text-color)', textDecoration: 'none', fontWeight: 600 }}>Blog</Link>
+            <Link onClick={() => setIsMobileMenuOpen(false)} to="/contact" className="mobile-full-btn">
+              <button style={{ padding: '0.6rem 2rem', boxShadow: 'none' }}>Get Started</button>
             </Link>
           </div>
         </div>
