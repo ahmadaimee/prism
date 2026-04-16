@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { Check, PhoneCall, Shield, TrendingUp, MonitorSmartphone, Share2 } from 'lucide-react';
 
 const Pricing = () => {
@@ -128,21 +129,23 @@ const Pricing = () => {
                 </ul>
               </div>
 
-              <button style={{ 
-                width: '100%', 
-                background: plan.highlight ? 'linear-gradient(135deg, var(--secondary), var(--primary))' : 'rgba(255, 255, 255, 0.8)',
-                color: plan.highlight ? '#fff' : 'var(--text-color)',
-                border: plan.highlight ? 'none' : '1px solid rgba(255,255,255,1)',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                gap: '0.5rem',
-                fontSize: '1.1rem',
-                padding: '1rem',
-                boxShadow: plan.highlight ? '0 10px 25px rgba(2, 132, 199, 0.3)' : '0 4px 15px rgba(0,0,0,0.02)'
-              }}>
-                {plan.buttonText}
-              </button>
+              <Link to="/contact" style={{ display: 'block', width: '100%', textDecoration: 'none' }}>
+                <button style={{ 
+                  width: '100%', 
+                  background: plan.highlight ? 'linear-gradient(135deg, var(--secondary), var(--primary))' : 'rgba(255, 255, 255, 0.8)',
+                  color: plan.highlight ? '#fff' : 'var(--text-color)',
+                  border: plan.highlight ? 'none' : '1px solid rgba(255,255,255,1)',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  gap: '0.5rem',
+                  fontSize: '1.1rem',
+                  padding: '1rem',
+                  boxShadow: plan.highlight ? '0 10px 25px rgba(2, 132, 199, 0.3)' : '0 4px 15px rgba(0,0,0,0.02)'
+                }}>
+                  {plan.buttonText}
+                </button>
+              </Link>
             </motion.div>
           ))}
         </div>
@@ -184,9 +187,11 @@ const Pricing = () => {
           <div style={{ flex: '0 1 300px', textAlign: 'center', padding: '3rem', background: 'rgba(255,255,255,0.8)', borderRadius: '24px', border: '1px solid white', boxShadow: '0 10px 30px rgba(0,0,0,0.05)' }}>
             <p style={{ color: 'var(--text-muted)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '0.5rem' }}>Starts At</p>
             <div style={{ fontSize: '4rem', fontWeight: 800, fontFamily: "'Outfit', sans-serif", color: 'var(--primary)', marginBottom: '1.5rem', lineHeight: 1 }}>$800</div>
-            <button style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '0.5rem' }}>
-              <PhoneCall size={18} /> Call us to Start
-            </button>
+            <a href="tel:+13052827544" style={{ textDecoration: 'none', display: 'block', width: '100%' }}>
+              <button style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '0.5rem' }}>
+                <PhoneCall size={18} /> Call us to Start
+              </button>
+            </a>
           </div>
         </motion.div>
       </section>
