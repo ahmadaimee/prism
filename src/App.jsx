@@ -64,7 +64,7 @@ function App() {
           <div className="footer-col">
             <h3 style={{ marginBottom: '1.5rem' }}>Global HQ</h3>
             <p style={{ color: 'var(--text-muted)' }}>Digital Remote First</p>
-            <p style={{ color: 'var(--text-muted)' }}>Serving clients worldwide.</p>
+            <p style={{ color: 'var(--text-muted)', fontWeight: 500 }}>Delivering digital impact on a global scale.</p>
           </div>
           <div className="footer-col">
             <h3 style={{ marginBottom: '1.5rem' }}>Contact Us</h3>
