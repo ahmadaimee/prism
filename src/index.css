@@ -1,19 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap');
+
 :root {
-  --bg-color: #050505;
-  --text-color: #f1f1f1;
-  --text-muted: #a0a0ab;
-  --primary: #00d2ff;
-  --primary-glow: rgba(0, 210, 255, 0.4);
-  --secondary: #7a00ff;
-  --secondary-glow: rgba(122, 0, 255, 0.4);
-  --accent: #ff007f;
+  --bg-color: #0d1117;
+  --text-color: #f0f6fc;
+  --text-muted: #8b949e;
+  --primary: #00f2fe;
+  --primary-glow: rgba(0, 242, 254, 0.5);
+  --secondary: #4facfe;
+  --secondary-glow: rgba(79, 172, 254, 0.5);
+  --accent: #ff0844;
   
-  --glass-bg: rgba(255, 255, 255, 0.03);
-  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.15);
   --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 
-  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  line-height: 1.6;
   font-weight: 400;
 
   color-scheme: dark;
@@ -31,13 +33,14 @@ body {
   margin: 0;
   min-height: 100vh;
   overflow-x: hidden;
-  background: radial-gradient(circle at top, #111 0%, var(--bg-color) 60%);
+  background: radial-gradient(circle at top right, #161b22 0%, var(--bg-color) 60%);
   background-attachment: fixed;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Outfit', sans-serif;
   margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
 }
 
 a {
@@ -47,36 +50,37 @@ a {
   transition: all 0.3s ease;
 }
 a:hover {
-  text-shadow: 0 0 8px var(--primary-glow);
+  text-shadow: 0 0 10px var(--primary-glow);
 }
 
 button {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Outfit', sans-serif;
   background: linear-gradient(135deg, var(--secondary), var(--primary));
   border: none;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  font-weight: 600;
+  padding: 0.85rem 1.75rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
   color: #fff;
-  border-radius: 8px;
+  border-radius: 50px;
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px var(--secondary-glow);
 }
 
 button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px var(--primary-glow);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px var(--primary-glow);
 }
 
-/* Glassmorphism Utilities */
+/* Glassmorphism Utilities - More transparent */
 .glass {
-  background: var(--glass-bg);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--glass-border);
-  border-radius: 16px;
-  box-shadow: var(--glass-shadow);
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
 }
 
 .text-gradient {
@@ -94,4 +98,39 @@ button:hover {
 
 section {
   padding: 5rem 0;
+}
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.4;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(13, 17, 23, 0.3) 0%, rgba(13, 17, 23, 1) 100%);
+  z-index: 1;
+}
+
+.logo-modern {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: 1.8rem;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #fff, var(--primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
