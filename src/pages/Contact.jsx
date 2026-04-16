@@ -49,14 +49,14 @@ const Contact = () => {
                 <div style={{ padding: '1rem', background: 'rgba(2, 132, 199, 0.1)', borderRadius: '50%', color: 'var(--primary)' }}><Phone size={24} /></div>
                 <div>
                   <h4 style={{ color: 'var(--text-muted)', margin: 0 }}>Call Us</h4>
-                  <p style={{ color: 'var(--text-color)', fontWeight: 600, fontSize: '1.1rem' }}>+1 (555) 123-4567</p>
+                  <p style={{ color: 'var(--text-color)', fontWeight: 600, fontSize: '1.1rem' }}>+1 (305) 282-7544</p>
                 </div>
               </div>
                <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
                 <div style={{ padding: '1rem', background: 'rgba(2, 132, 199, 0.1)', borderRadius: '50%', color: 'var(--primary)' }}><MapPin size={24} /></div>
                 <div>
-                  <h4 style={{ color: 'var(--text-muted)', margin: 0 }}>Global Headquarters</h4>
-                  <p style={{ color: 'var(--text-color)', fontWeight: 600, fontSize: '1.1rem' }}>Digital Remote First</p>
+                  <h4 style={{ color: 'var(--text-muted)', margin: 0 }}>Headquarters</h4>
+                  <p style={{ color: 'var(--text-color)', fontWeight: 600, fontSize: '1.1rem' }}>Prism Presence HQ</p>
                 </div>
               </div>
             </div>
