@@ -100,11 +100,11 @@ const Home = () => {
 
       <section className="promo-section" style={{ position: 'relative' }}>
         <motion.div className="container" initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
-          <div className="promo-card glass" style={{ padding: '5rem 3rem' }}>
+          <div className="promo-card glass" style={{ padding: '5rem 3rem', background: 'var(--text-color)', border: '1px solid var(--primary)' }}>
             <div className="promo-badge" style={{ background: 'linear-gradient(135deg, var(--secondary), var(--primary))', boxShadow: '0 4px 15px rgba(2,132,199,0.3)', color: 'white' }}>ENTERPRISE EXCLUSIVE</div>
-            <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem', color: 'var(--text-color)' }}>Custom Global Websites</h2>
-            <div className="price" style={{ margin: '2rem 0', color: 'var(--text-color)' }}>$499<span style={{ color: 'var(--text-muted)' }}>/mo</span></div>
-            <ul className="promo-features" style={{ margin: '3rem 0', color: 'var(--text-muted)', fontWeight: 500 }}>
+            <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem', color: '#ffffff' }}>Custom Global Websites</h2>
+            <div className="price" style={{ margin: '2rem 0', color: '#ffffff' }}>$499<span style={{ color: 'rgba(255,255,255,0.6)' }}>/mo</span></div>
+            <ul className="promo-features" style={{ margin: '3rem 0', color: 'rgba(255,255,255,0.8)', fontWeight: 500 }}>
               <li><CheckIcon /> Premium UX/UI Design</li>
               <li><CheckIcon /> Integrated Digital Strategy</li>
               <li><CheckIcon /> Global Edge Cloud Hosting</li>
