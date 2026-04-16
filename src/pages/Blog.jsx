@@ -5,22 +5,22 @@ import { ArrowRight, Calendar, User } from 'lucide-react';
 const Blog = () => {
   const blogs = [
     {
-      title: "Why Local Discovery is Crucial for Florida Businesses in 2026",
-      excerpt: "Is your Southwest Florida business struggling to get foot traffic? Discover why mapping platforms and local listings are the secret weapons for local growth.",
+      title: "Why SEO is Crucial for Enterprise Businesses in 2026",
+      excerpt: "Is your business struggling to capture organic market share? Discover why technical SEO and robust infrastructure are the modern secrets to hyper-growth.",
       date: "April 15, 2026",
-      author: "Local Growth Team",
-      category: "Local Marketing"
+      author: "Growth Team",
+      category: "Digital Marketing"
     },
     {
-      title: "Top 5 Web Design Trends Dominating Miami",
-      excerpt: "Miami's vibrant culture demands websites that pop. From translucent glassmorphism to ultra-fast loading times, here is how Miami brands are winning online.",
+      title: "Top 5 Web Design Trends Dominating the Market",
+      excerpt: "Global standards demand websites that execute flawlessly. From Liquid Glassmorphism to ultra-fast rendering, here is how top brands are winning online.",
       date: "April 10, 2026",
-      author: "Design Experts",
+      author: "UI/UX Experts",
       category: "Web Design"
     },
     {
-      title: "How to Rank #1 on Google in South Florida",
-      excerpt: "Competition in Miami and Fort Myers is fierce. Read our comprehensive guide on dominating local search results and driving organic leads.",
+      title: "How to Rank #1 on Google Globally",
+      excerpt: "The digital landscape is fiercely competitive. Read our comprehensive technical guide on dominating global search engine results pages and driving organic leads.",
       date: "April 02, 2026",
       author: "SEO Strategists",
       category: "Search Engine Optimization"
@@ -32,10 +32,10 @@ const Blog = () => {
       <section className="hero" style={{ minHeight: '30vh', paddingTop: '10rem', paddingBottom: '2rem', position: 'relative' }}>
         <div className="container" style={{ position: 'relative', zIndex: 2, textAlign: 'center' }}>
            <h1 style={{ fontSize: '3.5rem', color: 'var(--text-color)' }}>
-            Digital Marketing <span className="text-gradient">Insights</span>
+            Digital Growth <span className="text-gradient">Insights</span>
           </h1>
           <p style={{ fontSize: '1.25rem', color: 'var(--text-muted)', maxWidth: '600px', margin: '1rem auto', fontWeight: 500 }}>
-            Strategies, tips, and trends to help your Florida business dominate local search and outpace the competition.
+            Strategies, technical tips, and UI/UX trends to help your business dominate global search and outpace the competition.
           </p>
         </div>
       </section>
