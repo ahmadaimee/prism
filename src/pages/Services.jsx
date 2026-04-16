@@ -46,7 +46,6 @@ const Services = () => {
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              whileHover={{ y: -10, scale: 1.02 }}
               style={{ padding: '3rem 2rem' }}
             >
                <div className="service-icon" style={{ color: "var(--primary)", marginBottom: '2rem', display: 'inline-flex', padding: '1rem', background: 'rgba(2, 132, 199, 0.1)', borderRadius: '20px' }}>{service.icon}</div>

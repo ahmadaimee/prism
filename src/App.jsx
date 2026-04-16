@@ -7,6 +7,9 @@ import About from './pages/About';
 import Services from './pages/Services';
 import Pricing from './pages/Pricing';
 import Blog from './pages/Blog';
+import Contact from './pages/Contact';
+import ScrollToTop from './components/ScrollToTop';
+import Chatbot from './components/Chatbot';
 import './App.css';
 
 function App() {
@@ -14,6 +17,7 @@ function App() {
 
   return (
     <div className="app">
+      <ScrollToTop />
       <nav className="navbar" style={{ padding: '1rem 0' }}>
         <div className="container">
           <Link to="/" style={{ textDecoration: 'none' }}>
@@ -28,7 +32,9 @@ function App() {
             <Link to="/services" style={{ color: 'var(--text-color)', textDecoration: 'none', fontWeight: 600 }}>Services</Link>
             <Link to="/pricing" style={{ color: 'var(--text-color)', textDecoration: 'none', fontWeight: 600 }}>Pricing</Link>
             <Link to="/blog" style={{ color: 'var(--text-color)', textDecoration: 'none', fontWeight: 600 }}>Blog</Link>
-            <button style={{ padding: '0.6rem 1.5rem' }}>Get Started</button>
+            <Link to="/contact">
+              <button style={{ padding: '0.6rem 1.5rem', boxShadow: 'none' }}>Get Started</button>
+            </Link>
           </div>
         </div>
       </nav>
@@ -40,10 +46,13 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </AnimatePresence>
 
-      <footer className="footer" style={{ borderTop: '1px solid var(--glass-border)', padding: '4rem 0', marginTop: 'auto', background: 'rgba(15, 23, 42, 0.02)' }}>
+      <Chatbot />
+
+      <footer className="footer" style={{ borderTop: '1px solid rgba(0,0,0,0.05)', padding: '4rem 0', marginTop: 'auto', background: 'rgba(15, 23, 42, 0.02)' }}>
         <div className="container footer-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem' }}>
           <div className="footer-col">
             <div className="logo-modern" style={{ marginBottom: '1.5rem', fontSize: '1.4rem' }}>
@@ -53,9 +62,9 @@ function App() {
             <p style={{ color: 'var(--text-muted)' }}>Elevating brands through forward-thinking design and marketing.</p>
           </div>
           <div className="footer-col">
-            <h3 style={{ marginBottom: '1.5rem' }}>Location</h3>
-            <p style={{ color: 'var(--text-muted)' }}>Miami, FL</p>
-            <p style={{ color: 'var(--text-muted)' }}>Serving clients nationwide.</p>
+            <h3 style={{ marginBottom: '1.5rem' }}>Global HQ</h3>
+            <p style={{ color: 'var(--text-muted)' }}>Digital Remote First</p>
+            <p style={{ color: 'var(--text-muted)' }}>Serving clients worldwide.</p>
           </div>
           <div className="footer-col">
             <h3 style={{ marginBottom: '1.5rem' }}>Contact Us</h3>

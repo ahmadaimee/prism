@@ -86,7 +86,7 @@ const Home = () => {
         
         <motion.div className="services-grid" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           {services.map((service, index) => (
-            <motion.div key={index} variants={itemVariants} className="service-card glass" whileHover={{ y: -10, scale: 1.02 }} style={{ padding: '3rem 2rem' }}>
+            <motion.div key={index} variants={itemVariants} className="service-card glass" style={{ padding: '3rem 2rem' }}>
               <div className="service-icon" style={{ color: "var(--primary)", marginBottom: '1.5rem', background: 'rgba(2, 132, 199, 0.1)', display: 'inline-flex', padding: '1rem', borderRadius: '15px' }}>{service.icon}</div>
               <h3 style={{ fontSize: '1.6rem', marginBottom: '1rem', color: 'var(--text-color)' }}>{service.title}</h3>
               <p style={{ color: 'var(--text-muted)', lineHeight: 1.6, fontWeight: 500 }}>{service.desc}</p>
