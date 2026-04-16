@@ -101,9 +101,9 @@ const Home = () => {
       <section className="promo-section" style={{ position: 'relative' }}>
         <motion.div className="container" initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
           <div className="promo-card glass" style={{ padding: '5rem 3rem', background: 'var(--text-color)', border: '1px solid var(--primary)' }}>
-            <div className="promo-badge" style={{ display: 'inline-flex', alignItems: 'center', padding: '0.4rem 1.2rem', background: 'rgba(2, 132, 199, 0.15)', border: '1px solid rgba(2, 132, 199, 0.5)', color: '#38bdf8', borderRadius: '30px', fontSize: '0.8rem', fontWeight: 800, letterSpacing: '1.5px', textTransform: 'uppercase', backdropFilter: 'blur(10px)', boxShadow: '0 0 20px rgba(2, 132, 199, 0.2)', marginBottom: '1rem' }}>
-              <span style={{ marginRight: '0.6rem', width: '6px', height: '6px', borderRadius: '50%', background: '#38bdf8', boxShadow: '0 0 8px #38bdf8', display: 'inline-block' }}></span>
-              ENTERPRISE EXCLUSIVE
+            <div className="promo-badge" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', padding: '0.6rem 1.2rem', background: 'rgba(2, 132, 199, 0.15)', border: '1px solid rgba(2, 132, 199, 0.5)', color: '#38bdf8', borderRadius: '30px', fontSize: '0.8rem', fontWeight: 800, letterSpacing: '1.5px', textTransform: 'uppercase', backdropFilter: 'blur(10px)', boxShadow: '0 0 20px rgba(2, 132, 199, 0.2)', marginBottom: '1rem', lineHeight: 1 }}>
+              <span style={{ marginRight: '0.6rem', width: '6px', height: '6px', borderRadius: '50%', background: '#38bdf8', boxShadow: '0 0 8px #38bdf8', display: 'flex', flexShrink: 0 }}></span>
+              <span style={{ display: 'flex', alignItems: 'center', paddingTop: '2px' }}>ENTERPRISE EXCLUSIVE</span>
             </div>
             <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem', color: '#ffffff' }}>Custom Global Websites</h2>
             <div className="price" style={{ margin: '2rem 0', color: '#ffffff' }}>$499<span style={{ color: 'rgba(255,255,255,0.6)' }}>/mo</span></div>
