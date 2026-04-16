@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import IntroAnimation from '../components/ui/scroll-morph-hero';
 
 const About = () => {
   return (
@@ -13,12 +12,6 @@ const About = () => {
           <motion.p initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.3 }} style={{ fontSize: '1.25rem', color: 'var(--text-muted)', maxWidth: '800px', margin: '1.5rem auto', fontWeight: 500 }}>
             We are a premier global digital agency dedicated to elevating brands through cutting-edge design, data-driven marketing, and exceptional corporate branding. We don't just build websites; we craft digital experiences that capture audiences worldwide.
           </motion.p>
-        </div>
-      </section>
-
-      <section className="container" style={{ paddingBottom: '3rem' }}>
-        <div style={{ height: '700px', width: '100%', marginBottom: '4rem' }}>
-          <IntroAnimation />
         </div>
       </section>
 
