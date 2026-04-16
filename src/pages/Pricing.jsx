@@ -5,30 +5,30 @@ import { Check, PhoneCall } from 'lucide-react';
 const Pricing = () => {
   const plans = [
     {
-      name: "Growth & Visibility",
+      name: "Lehigh Growth & SEO",
       price: "$199",
       period: "per month",
-      description: "Accelerate your online presence with data-driven SEO and consistent content.",
+      description: "Accelerate your local presence with data-driven SEO in Southwest Florida.",
       features: [
-        "Comprehensive SEO Optimization",
-        "Google Maps (Local SEO) Setup",
-        "Monthly Blog Posting",
-        "Keyword Tracking & Reporting",
+        "Comprehensive Local SEO",
+        "Google Maps Setup & Ranking",
+        "Monthly SEO Blog Posting",
+        "Florida Keyword Tracking",
       ],
       buttonText: "Start Growing",
       highlight: false
     },
     {
-      name: "Essential Presence",
+      name: "Miami Essential Presence",
       price: "$250",
       period: "per month",
-      description: "Everything you need to keep your custom website running smoothly and securely.",
+      description: "Everything you need to keep your custom website running fast in Florida.",
       features: [
-        "Premium Fast Hosting",
+        "Premium Fast Cloud Hosting",
         "Routine Website Maintenance",
         "Monthly Technical Support",
         "Security & Uptime Monitoring",
-        "Regular Backups"
+        "Regular Cloud Backups"
       ],
       buttonText: "Get Standard Support",
       highlight: true
@@ -37,11 +37,11 @@ const Pricing = () => {
       name: "Enterprise Custom",
       price: "Custom",
       period: "flexible",
-      description: "Tailored strategies and dedicated support for demanding digital ecosystems.",
+      description: "Tailored strategies for demanding digital ecosystems in South Florida.",
       features: [
         "Everything in previous tiers",
         "Dedicated Support Channel",
-        "Custom Feature Development",
+        "Custom Workflow Development",
         "Priority Response Times",
         "Strategic Consultation Calls"
       ],
@@ -57,10 +57,10 @@ const Pricing = () => {
         <div className="bg-glow" style={{ top: '10%' }}></div>
         <div className="container" style={{ position: 'relative', zIndex: 2, textAlign: 'center' }}>
           <motion.h1 initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.2 }}>
-            Simple, Transparent <span className="text-gradient">Pricing</span>
+            Transparent <span className="text-gradient">Local Pricing</span>
           </motion.h1>
-          <motion.p initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.3 }} style={{ fontSize: '1.25rem', color: 'var(--text-muted)', maxWidth: '600px', margin: '1.5rem auto' }}>
-            Choose the plan that fits your business needs. No hidden fees. Professional support at every level.
+          <motion.p initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.3 }} style={{ fontSize: '1.25rem', color: 'var(--text-muted)', maxWidth: '600px', margin: '1.5rem auto', fontWeight: 500 }}>
+            Choose the specific plan that fuels your Florida business.
           </motion.p>
         </div>
       </section>
@@ -76,7 +76,7 @@ const Pricing = () => {
                 position: 'relative',
                 display: 'flex',
                 flexDirection: 'column',
-                border: plan.highlight ? '1px solid var(--primary)' : '1px solid var(--glass-border)',
+                border: plan.highlight ? '1px solid var(--primary)' : '1px solid rgba(0,0,0,0.05)',
                 transform: plan.highlight ? 'scale(1.05)' : 'scale(1)',
                 zIndex: plan.highlight ? 10 : 1
               }}
@@ -89,23 +89,24 @@ const Pricing = () => {
                 <div style={{
                   position: 'absolute', top: 0, left: '50%', transform: 'translate(-50%, -50%)',
                   background: 'linear-gradient(135deg, var(--primary), var(--secondary))',
-                  color: 'white', padding: '0.25rem 1rem', borderRadius: '20px', fontSize: '0.85rem', fontWeight: 'bold'
+                  color: 'white', padding: '0.25rem 1rem', borderRadius: '20px', fontSize: '0.85rem', fontWeight: 'bold',
+                  boxShadow: '0 4px 10px rgba(2, 132, 199, 0.3)'
                 }}>
                   MOST POPULAR
                 </div>
               )}
-              <h3 style={{ fontSize: '1.5rem', marginBottom: '0.5rem', color: plan.highlight ? 'var(--primary)' : 'white' }}>{plan.name}</h3>
-              <p style={{ color: 'var(--text-muted)', marginBottom: '2rem', minHeight: '48px' }}>{plan.description}</p>
+              <h3 style={{ fontSize: '1.5rem', marginBottom: '0.5rem', color: plan.highlight ? 'var(--primary)' : 'var(--text-color)' }}>{plan.name}</h3>
+              <p style={{ color: 'var(--text-muted)', marginBottom: '2rem', minHeight: '48px', fontWeight: 500 }}>{plan.description}</p>
               
               <div style={{ marginBottom: '2rem' }}>
-                <span style={{ fontSize: '3rem', fontWeight: 800, fontFamily: "'Space Grotesk', sans-serif" }}>{plan.price}</span>
+                <span style={{ fontSize: '3rem', fontWeight: 800, fontFamily: "'Outfit', sans-serif" }}>{plan.price}</span>
                 {plan.period && <span style={{ color: 'var(--text-muted)' }}> /{plan.period}</span>}
               </div>
 
               <div style={{ flexGrow: 1, marginBottom: '2rem' }}>
                 <ul style={{ listStyle: 'none', padding: 0 }}>
                   {plan.features.map((feature, idx) => (
-                    <li key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', marginBottom: '1rem', color: '#e0e0e0' }}>
+                    <li key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', marginBottom: '1rem', color: 'var(--text-color)', fontWeight: 500 }}>
                       <Check size={20} style={{ color: 'var(--primary)', flexShrink: 0, marginTop: '0.1rem' }} />
                       <span>{feature}</span>
                     </li>
@@ -115,12 +116,14 @@ const Pricing = () => {
 
               <button style={{ 
                 width: '100%', 
-                background: plan.highlight ? 'linear-gradient(135deg, var(--secondary), var(--primary))' : 'rgba(255, 255, 255, 0.1)',
-                border: plan.highlight ? 'none' : '1px solid var(--glass-border)',
+                background: plan.highlight ? 'linear-gradient(135deg, var(--secondary), var(--primary))' : 'rgba(2, 132, 199, 0.05)',
+                color: plan.highlight ? '#fff' : 'var(--primary)',
+                border: plan.highlight ? 'none' : '1px solid rgba(2, 132, 199, 0.2)',
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
-                gap: '0.5rem'
+                gap: '0.5rem',
+                boxShadow: plan.highlight ? '0 4px 15px var(--secondary-glow)' : 'none'
               }}>
                 {plan.callAction && <PhoneCall size={18} />}
                 {plan.buttonText}

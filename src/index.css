@@ -1,24 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap');
 
 :root {
-  --bg-color: #0d1117;
-  --text-color: #f0f6fc;
-  --text-muted: #8b949e;
-  --primary: #00f2fe;
-  --primary-glow: rgba(0, 242, 254, 0.5);
-  --secondary: #4facfe;
-  --secondary-glow: rgba(79, 172, 254, 0.5);
-  --accent: #ff0844;
+  --bg-color: #f8fafc;
+  --text-color: #0f172a;
+  --text-muted: #475569;
+  --primary: #0284c7;  /* Deep vibrant blue */
+  --primary-glow: rgba(2, 132, 199, 0.3);
+  --secondary: #6366f1; /* Indigo */
+  --secondary-glow: rgba(99, 102, 241, 0.3);
+  --accent: #f43f5e; /* Rose */
   
-  --glass-bg: rgba(255, 255, 255, 0.05);
-  --glass-border: rgba(255, 255, 255, 0.15);
-  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  --glass-bg: rgba(255, 255, 255, 0.85); /* Translucent instead of transparent */
+  --glass-border: rgba(255, 255, 255, 0.9);
+  --glass-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.08);
 
   font-family: 'Plus Jakarta Sans', sans-serif;
   line-height: 1.6;
   font-weight: 400;
 
-  color-scheme: dark;
+  color-scheme: light;
   background-color: var(--bg-color);
   color: var(--text-color);
 }
@@ -33,7 +33,7 @@ body {
   margin: 0;
   min-height: 100vh;
   overflow-x: hidden;
-  background: radial-gradient(circle at top right, #161b22 0%, var(--bg-color) 60%);
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
   background-attachment: fixed;
 }
 
@@ -41,6 +41,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Outfit', sans-serif;
   margin-bottom: 0.5rem;
   letter-spacing: -0.02em;
+  color: #0f172a;
 }
 
 a {
@@ -50,7 +51,7 @@ a {
   transition: all 0.3s ease;
 }
 a:hover {
-  text-shadow: 0 0 10px var(--primary-glow);
+  text-shadow: 0 0 5px var(--primary-glow);
 }
 
 button {
@@ -73,14 +74,14 @@ button:hover {
   box-shadow: 0 8px 25px var(--primary-glow);
 }
 
-/* Glassmorphism Utilities - More transparent */
+/* Translucent Glass Utilities */
 .glass {
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 1);
   border-radius: 20px;
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: var(--glass-shadow);
 }
 
 .text-gradient {
@@ -108,7 +109,7 @@ section {
   height: 100%;
   object-fit: cover;
   z-index: 0;
-  opacity: 0.4;
+  opacity: 0.15; /* Much lighter for light theme */
 }
 
 .hero-overlay {
@@ -117,7 +118,7 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(13, 17, 23, 0.3) 0%, rgba(13, 17, 23, 1) 100%);
+  background: linear-gradient(to bottom, rgba(248, 250, 252, 0.4) 0%, rgba(248, 250, 252, 1) 100%);
   z-index: 1;
 }
 
@@ -130,7 +131,7 @@ section {
   font-size: 1.8rem;
   letter-spacing: -0.05em;
   text-transform: uppercase;
-  background: linear-gradient(135deg, #fff, var(--primary));
+  background: linear-gradient(135deg, #0f172a, var(--primary));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
 import Pricing from './pages/Pricing';
+import Blog from './pages/Blog';
 import './App.css';
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
             <Link to="/about" style={{ color: 'var(--text-color)', textDecoration: 'none', fontWeight: 600 }}>About</Link>
             <Link to="/services" style={{ color: 'var(--text-color)', textDecoration: 'none', fontWeight: 600 }}>Services</Link>
             <Link to="/pricing" style={{ color: 'var(--text-color)', textDecoration: 'none', fontWeight: 600 }}>Pricing</Link>
+            <Link to="/blog" style={{ color: 'var(--text-color)', textDecoration: 'none', fontWeight: 600 }}>Blog</Link>
             <button style={{ padding: '0.6rem 1.5rem' }}>Get Started</button>
           </div>
         </div>
@@ -37,10 +39,11 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/pricing" element={<Pricing />} />
+          <Route path="/blog" element={<Blog />} />
         </Routes>
       </AnimatePresence>
 
-      <footer className="footer" style={{ borderTop: '1px solid var(--glass-border)', padding: '4rem 0', marginTop: 'auto', background: 'rgba(0,0,0,0.2)' }}>
+      <footer className="footer" style={{ borderTop: '1px solid var(--glass-border)', padding: '4rem 0', marginTop: 'auto', background: 'rgba(15, 23, 42, 0.02)' }}>
         <div className="container footer-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem' }}>
           <div className="footer-col">
             <div className="logo-modern" style={{ marginBottom: '1.5rem', fontSize: '1.4rem' }}>
