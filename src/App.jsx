@@ -69,12 +69,12 @@ function App() {
           <div className="footer-col">
             <h3 style={{ marginBottom: '1.5rem' }}>Contact Us</h3>
             <p style={{ color: 'var(--text-muted)', marginBottom: '1rem' }}>Ready to start your project?</p>
-            <div className="contact-highlight" style={{ display: 'flex', alignItems: 'center', gap: '1rem', fontSize: '1.4rem', color: 'var(--primary)', fontWeight: 700 }}>
-              <div style={{ display: 'flex', gap: '0.5rem' }}>
-                <a href="tel:+13052827544" style={{ color: 'inherit' }}><Phone size={24} /></a>
-                <a href="https://wa.me/13052827544" style={{ color: '#25D366' }}><MessageCircle size={24} /></a>
+            <div className="contact-highlight" style={{ display: 'flex', alignItems: 'center', gap: '1rem', fontSize: '1.4rem', color: 'var(--text-color)', fontWeight: 700 }}>
+              <div style={{ display: 'flex', gap: '0.6rem' }}>
+                <a href="tel:+13052827544" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'var(--text-color)', color: '#ffffff', padding: '0.4rem', borderRadius: '50%' }}><Phone size={20} /></a>
+                <a href="https://wa.me/13052827544" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#25D366', color: '#ffffff', padding: '0.4rem', borderRadius: '50%' }}><MessageCircle size={20} /></a>
               </div>
-              +1 (305) 282-7544
+              <a href="tel:+13052827544" style={{ color: 'inherit', textDecoration: 'none' }}>+1 (305) 282-7544</a>
             </div>
           </div>
         </div>
