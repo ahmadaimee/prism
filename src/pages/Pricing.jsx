@@ -7,6 +7,7 @@ const Pricing = () => {
   const plans = [
     {
       name: "Website Care Plan",
+      oldPrice: "$299",
       price: "$199",
       period: "per month",
       description: "Ideal for businesses that just want everything handled and running smoothly.",
@@ -23,7 +24,8 @@ const Pricing = () => {
     },
     {
       name: "Growth Plan",
-      price: "$399",
+      oldPrice: "$399",
+      price: "$250",
       period: "per month",
       description: "Designed for businesses that want to actively grow and generate more leads.",
       icon: <TrendingUp size={32} style={{ color: 'white', marginBottom: '1rem' }} />,
@@ -39,7 +41,8 @@ const Pricing = () => {
     },
     {
       name: "Social Media + Web",
-      price: "$599",
+      oldPrice: "$699",
+      price: "$499",
       period: "per month",
       description: "Best for businesses wanting their entire online presence handled expertly.",
       icon: <Share2 size={32} style={{ color: 'var(--primary)', marginBottom: '1rem' }} />,
@@ -114,8 +117,13 @@ const Pricing = () => {
               <p style={{ color: 'rgba(255,255,255,0.7)', marginBottom: '2rem', minHeight: '48px', fontWeight: 500 }}>{plan.description}</p>
               
               <div style={{ marginBottom: '2.5rem', borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '2.5rem' }}>
-                <span style={{ fontSize: '3.5rem', fontWeight: 800, fontFamily: "'Outfit', sans-serif", color: '#ffffff' }}>{plan.price}</span>
-                {plan.period && <span style={{ color: 'rgba(255,255,255,0.6)', fontWeight: 600 }}> /{plan.period}</span>}
+                <div style={{ display: 'flex', flexDirection: 'column' }}>
+                  <span style={{ fontSize: '1.2rem', textDecoration: 'line-through', color: 'rgba(255, 255, 255, 0.4)', fontWeight: 600, marginBottom: '-0.5rem' }}>{plan.oldPrice}</span>
+                  <div>
+                    <span style={{ fontSize: '3.5rem', fontWeight: 800, fontFamily: "'Outfit', sans-serif", color: '#ffffff' }}>{plan.price}</span>
+                    {plan.period && <span style={{ color: 'rgba(255,255,255,0.6)', fontWeight: 600 }}> /{plan.period}</span>}
+                  </div>
+                </div>
               </div>
 
               <div style={{ flexGrow: 1, marginBottom: '3rem' }}>
