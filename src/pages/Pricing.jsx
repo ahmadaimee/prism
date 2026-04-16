@@ -5,15 +5,15 @@ import { Check, PhoneCall } from 'lucide-react';
 const Pricing = () => {
   const plans = [
     {
-      name: "Lehigh Growth & SEO",
+      name: "Digital Growth",
       price: "$199",
       period: "per month",
-      description: "Accelerate your local presence with data-driven SEO in Southwest Florida.",
+      description: "Accelerate your local presence with data-driven workflows in Southwest Florida.",
       features: [
-        "Comprehensive Local SEO",
-        "Google Maps Setup & Ranking",
-        "Monthly SEO Blog Posting",
-        "Florida Keyword Tracking",
+        "Comprehensive Web Analytics",
+        "Google Maps Integration",
+        "Monthly Content Updates",
+        "Florida Market Tracking",
       ],
       buttonText: "Start Growing",
       highlight: false

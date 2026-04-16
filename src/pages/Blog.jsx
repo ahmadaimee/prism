@@ -5,10 +5,10 @@ import { ArrowRight, Calendar, User } from 'lucide-react';
 const Blog = () => {
   const blogs = [
     {
-      title: "Why Local SEO is Crucial for Lehigh Acres Businesses in 2026",
-      excerpt: "Is your Southwest Florida business struggling to get foot traffic? Discover why Google Maps and Local SEO are the secret weapons for Lehigh Acres growth.",
+      title: "Why Local Discovery is Crucial for Florida Businesses in 2026",
+      excerpt: "Is your Southwest Florida business struggling to get foot traffic? Discover why mapping platforms and local listings are the secret weapons for local growth.",
       date: "April 15, 2026",
-      author: "Local SEO Team",
+      author: "Local Growth Team",
       category: "Local Marketing"
     },
     {

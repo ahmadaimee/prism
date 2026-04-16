@@ -1,38 +1,38 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Palette, TrendingUp, Edit3, Type, Share2, MonitorSmartphone, Target, Search, BarChart, Users, Star } from 'lucide-react';
+import { Palette, TrendingUp, Edit3, Type, Share2, MonitorSmartphone, Target, Search, BarChart, Star } from 'lucide-react';
 
 const Services = () => {
   const allServices = [
-    { title: 'Miami Web Design', icon: <MonitorSmartphone size={40} />, desc: 'We build responsive, ultra-fast websites tailored for the Florida market. We focus on local UX/UI that converts Miami and Lehigh Acres traffic into customers.' },
-    { title: 'Lehigh Acres Local SEO', icon: <TrendingUp size={40} />, desc: 'Climb the local search rankings. We use proven on-page and off-page SEO strategies to make you the top-rated business in South Florida.' },
+    { title: 'Miami Web Design', icon: <MonitorSmartphone size={40} />, desc: 'We build responsive, ultra-fast websites tailored for the Florida market. We focus on local UX/UI that converts traffic into customers.' },
+    { title: 'Miami SEO Strategies', icon: <TrendingUp size={40} />, desc: 'Climb the search rankings. We use proven on-page and off-page SEO strategies to make you the top-rated business in South Florida.' },
     { title: 'Florida Content Writing', icon: <Edit3 size={40} />, desc: 'Localize your message. We craft compelling copy for your landing pages that resonates specifically with Floridians.' },
-    { title: 'Blog & Article Writing', icon: <Type size={40} />, desc: 'Boost your site’s topical authority with SEO-optimized blog posts specifically targeting Miami and Lehigh Acres keywords.' },
-    { title: 'Social Media Management', icon: <Share2 size={40} />, desc: 'Connect with your local community. We manage your social channels so you can focus on running your Florida business.' },
-    { title: 'Brand Strategy', icon: <Palette size={40} />, desc: 'Stand out in Miami’s competitive market. We help you forge a memorable brand with stunning visual identity and logo design.' },
-    { title: 'PPC & Paid Ads', icon: <Target size={40} />, desc: 'Hyper-targeted local ad campaigns across Google and Meta to capture high-intent leads in your specific zip codes.' },
-    { title: 'Google Maps Optimization', icon: <Search size={40} />, desc: 'Capture local foot traffic in Lehigh. We optimize your Google Business Profile so nearby customers find your location instantly.' },
-    { title: 'Analytics & Reporting', icon: <BarChart size={40} />, desc: 'Transparent local reporting. We track metrics to show exactly how much your Lehigh Acres or Miami market share is growing.' },
+    { title: 'Authority Blogging', icon: <Type size={40} />, desc: 'Boost your site’s topical authority with SEO-optimized blog posts specifically targeting high-intent Florida keywords.' },
+    { title: 'Social Media Management', icon: <Share2 size={40} />, desc: 'Connect with your local community. We manage your social channels so you can focus on running your business.' },
+    { title: 'Brand Identity', icon: <Palette size={40} />, desc: 'Stand out in Miami’s competitive market. We help you forge a memorable brand with stunning visual identity and logo design.' },
+    { title: 'PPC & Paid Ads', icon: <Target size={40} />, desc: 'Hyper-targeted ad campaigns across Google and Meta to capture high-intent leads in your specific geographic zones.' },
+    { title: 'Google Maps Optimization', icon: <Search size={40} />, desc: 'Capture local foot traffic. We optimize your Google Business Profile so nearby customers find your location instantly.' },
+    { title: 'Reporting & Analytics', icon: <BarChart size={40} />, desc: 'Transparent reporting. We track metrics to show exactly how much your Miami market share is growing.' },
   ];
 
   const serviceReviews = [
-    { name: "John M.", role: "Lehigh Acres Business Owner", comment: "The Google Maps SEO package started bringing us local calls within weeks! Absolutely unmatched service." },
-    { name: "Amanda P.", role: "Miami E-Commerce", comment: "Their team rebuilt our store from the ground up targeting Florida buyers. Sales are up 45%!" },
+    { name: "John M.", role: "South Florida Business", comment: "Their digital approach brought us phone calls within weeks! Absolutely unmatched service." },
+    { name: "Amanda P.", role: "Miami E-Commerce", comment: "Their team rebuilt our store from the ground up. Online sales are up 45%!" },
     { name: "Carlos R.", role: "Tech Startup CEO", comment: "The branding perfectly captures the vibrant, modern energy of Miami." },
-    { name: "Rebecca T.", role: "Local Marketing VP", comment: "We outsourced our local SEO and social media to Prism Presence. Unbelievable ROI." }
+    { name: "Rebecca T.", role: "Local Marketing VP", comment: "We outsourced our local indexing and social media to Prism Presence. Unbelievable ROI." }
   ];
 
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }}>
       <section className="hero" style={{ minHeight: '40vh', paddingTop: '10rem', paddingBottom: '4rem', position: 'relative', overflow: 'hidden' }}>
-        <div className="bg-glow" style={{ top: '20%', left: '50%', transform: 'translateX(-50%)', opacity: 0.3 }}></div>
+        <div className="liquid-blob blob-3" style={{ top: '20%', left: '50%', transform: 'translateX(-50%)', opacity: 0.2 }}></div>
         <div className="container" style={{ position: 'relative', zIndex: 2, textAlign: 'center' }}>
            <h1 style={{ fontSize: '4rem', color: 'var(--text-color)' }}>
             Digital Growth for <br />
-            <span className="text-gradient">Miami & Lehigh Acres</span>
+            <span className="text-gradient">Miami Businesses</span>
           </h1>
           <p style={{ fontSize: '1.25rem', color: 'var(--text-muted)', maxWidth: '800px', margin: '1.5rem auto', fontWeight: 500 }}>
-            We provide a full-spectrum digital toolkit specifically optimized to help Florida businesses generate more local leads and dominate their markets.
+            We provide a full-spectrum digital toolkit specifically optimized to help Florida businesses generate more leads and dominate their markets.
           </p>
         </div>
       </section>
@@ -60,8 +60,8 @@ const Services = () => {
 
       <section className="container" style={{ paddingBottom: '8rem', paddingTop: '4rem' }}>
         <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-            <h2 className="section-title text-gradient" style={{ fontSize: '2.5rem' }}>Local Florida Feedback</h2>
-            <p style={{ color: 'var(--text-muted)', fontWeight: 500 }}>See what our neighbors say about our services.</p>
+            <h2 className="section-title text-gradient" style={{ fontSize: '2.5rem' }}>Local Feedback</h2>
+            <p style={{ color: 'var(--text-muted)', fontWeight: 500 }}>See what our clients say about our robust solutions.</p>
         </div>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem' }}>
            {serviceReviews.map((review, i) => (
