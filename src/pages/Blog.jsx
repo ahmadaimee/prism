@@ -70,7 +70,10 @@ const Blog = () => {
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}><Calendar size={14} /> {blog.date}</div>
                   </div>
                 </div>
-                <button style={{ marginTop: '1.5rem', width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: 'rgba(2, 132, 199, 0.05)', color: 'var(--primary)', boxShadow: 'none', border: '1px solid rgba(2, 132, 199, 0.1)' }}>
+                <button 
+                  onClick={() => alert("The full article reader is currently under development. Stay tuned for these insights!")}
+                  style={{ marginTop: '1.5rem', width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: 'rgba(2, 132, 199, 0.05)', color: 'var(--primary)', boxShadow: 'none', border: '1px solid rgba(2, 132, 199, 0.1)' }}
+                >
                   Read Article <ArrowRight size={18} />
                 </button>
               </div>
